@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleheader.css">
+    <link rel="stylesheet" href="head.css">
     <title>Header</title>
 </head>
 <body>
 
-  <nav>
+    <nav>
+
     <div class="logo">
-      <h2>Tuah Barbershop</h2>
+        <h2>Tuah Barbershop</h2>
     </div>
-    
+
     <ul class="nav-links">
-      <li><a href="#">Customer</a></li>
-      <li><a href="#">Owner</a></li>
-      <li><a href="#">Admin</a></li>
+        <li><a href="#">Customer</a></li>
+        <li><a href="#">Barber</a></li>
+        <li><a href="#">Admin</a></li>
     </ul>
-    
-  </nav>
+
+    </nav>
     
 </body>
 </html>
