@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    
     <title>Barbershop</title>
 </head>
 <body>
 
-<?php include 'header.php' ?>
+    <?php include 'head.php' ?>
  
-<div>
-    <div class="title">
-        <h2>Hello, welcome to the App</h2>
-    </div>
-</div>
+
 
     
 </body>
