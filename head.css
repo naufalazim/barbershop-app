@@ -13,14 +13,19 @@
 
 /* Navigation  */
 nav {
-    margin-top: 20px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; /* required */
+    /* margin-top: 20px; */
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: turquoise;
 }
 
 
 .nav-links {
+    
     display: flex;
     width: 20%;
     justify-content: space-around;
@@ -28,6 +33,7 @@ nav {
 
 /* Kotak nav  */
 .nav-links li {
+    background: whitesmoke;
     list-style: none;
     border: solid 3px black;
     padding: 6px 15px;
@@ -35,7 +41,7 @@ nav {
 }
 
 .nav-links li:hover {
-    background-color: turquoise;
+    background-color: yellow;
 
 }
 
