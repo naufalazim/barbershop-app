@@ -17,12 +17,12 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: turquoise;
+    background: #08324F; 
     
 }
 
 .box {
-    background: wheat;
+    background: #ECDBBA;
     width: 400px;
     padding: 40px 30px 50px 30px;
     text-align: center;
@@ -53,6 +53,7 @@ label p {
     padding: 10px 0px;
     font-family: 'Merriweather', serif;
     font-weight: 400;
+    color: #08324f;
 }
 
 
@@ -63,6 +64,7 @@ label p {
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
+    color: #08324F;
     
     
 }
@@ -71,18 +73,20 @@ label p {
 
 input[type="submit"] {
     width: 100%;
-    border: 1px solid black;
-    background: pink;
+    border: 3px solid black;
+    background: #08324f;
     border-radius: 50px;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
+    font-weight: bold;
     cursor: pointer;
     outline: none;
+    color: white;
+    border: none;
 }
 
 input[type="submit"]:hover {
     /* border-color: ; */
-    background: blue;
+    background: #C84B31;
     transition: .5s;
 }

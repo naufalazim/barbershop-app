@@ -16,7 +16,7 @@
     <nav>
 
     <div class="logo">
-        <h2>Tuah Barbershop</h2>
+        <h2>Barbershop</h2>
     </div>
 
     <ul class="nav-links">

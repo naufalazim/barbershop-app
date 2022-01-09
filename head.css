@@ -20,7 +20,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: turquoise;
+    background-color: #08324F;
 }
 
 
@@ -41,8 +41,7 @@ nav {
 }
 
 .nav-links li:hover {
-    background-color: yellow;
-
+    background-color: #C84B31;
 }
 
 /* Nav font */
@@ -52,17 +51,18 @@ nav {
 }
 
 .nav-links a:hover {
-    color: black;
+    color: #ECDBBA;
 }
 
 
 
 /* PART: Logo  */
 .logo {
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
     font-size: 25px;
     font-family: 'Merriweather', serif;
     font-weight: 900;
     text-align: center;
+    color: azure;
 }

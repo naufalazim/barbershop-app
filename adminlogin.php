@@ -30,9 +30,9 @@
                 <label><p>Password:</p>  </label>
                 <input type="password" class="" placeholder="Admin Password" value="">
 
-                <div class="submit-btn">
+                <!-- <div class="submit-btn"> -->
                 <br><input class="btn" type="submit" value="Login">
-                </div>
+                <!-- </div> -->
 
             </form>
 
