@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="adminlogin.css">
+    <script type="text/javascript" src="valid.js"></script>
     
     <title>Admin Login</title>
 </head>
@@ -22,13 +23,14 @@
                 <h4>Admin Login</h4>
             <!-- </div> -->
 
-            <form class="form" action="" method="POST">
+            <form class="form" action="" method="POST" onsubmit="return validate()">
                 <label><p>Username:</p> </label>
-                <input type="text" class="" placeholder="Admin Username"  value=""> <br>
-
+                <input type="text" class="username" placeholder="Admin Username"  value=""> <br>
+                <div id="error-text">Please fill the nama or password</div>
                 
                 <label><p>Password:</p>  </label>
-                <input type="password" class="" placeholder="Admin Password" value="">
+                <input type="password" class="password" placeholder="Admin Password" value="">
+                <div id="error-text">Please fill the nama or password</div>
 
                 <!-- <div class="submit-btn"> -->
                 <br><input class="btn" type="submit" value="Login">
@@ -39,6 +41,7 @@
         </div>
 
     </div>
+    
     
 </body>
 </html>
