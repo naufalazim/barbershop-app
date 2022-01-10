@@ -3,7 +3,7 @@
 <!-- Connecttion to Database: -->
 <?php
 
-include('./header/connection.php');
+include('./barbershop-app/connection.php');
 
 if (isset($_POST['login'])) {
 
@@ -19,7 +19,9 @@ if (isset($_POST['login'])) {
     }
 
     if (count($error)==0) {
+        
 
+        // Var from DB
         $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
 
 
@@ -30,11 +32,14 @@ if (isset($_POST['login'])) {
             echo "<script>alert('You are login as admin')</script>";
 
             $_SESSION['admin'] = $username;
+            $_SESSION['success'] = "You are now login!";
 
-            header("Location:index.php");
+            header("location: index.php"); //redirect
 
         }else{
-            echo "<script>alert('Invalid Username or Email')</script>";
+            // echo "<script>alert('wrong password or username')</script>";
+            // // array_push($error, "wrong password or username");
+            header("location: adminlogin.php"); //redirect
         }
 
 
@@ -75,7 +80,7 @@ if (isset($_POST['login'])) {
 
 
             <!-- FORM  -->
-            <form class="form" id="login-form" action="" method="POST" onsubmit="return validate()">
+            <form class="form" id="login-form" action="adminlogin.php" method="POST" onsubmit="return validate()">
 
                 <div class="alert alert-danger">
                     <?php
