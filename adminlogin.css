@@ -57,31 +57,10 @@ label p {
 }
 
 /* ERROR Handling Login  */
-#error-text {
-    margin-top: 5px;
-    width: 345px;
-    font-size: 18px;
-    color: #08324F;
-    background: #ff8e8e ;
-    text-align: center;
-    padding: 5px 8px;
-    border-radius: 3px;
-    border: 1px solid #ff8e8e;
-    
-}
 
-#error-pass {
-    margin-top: 5px;
-    width: 345px;
-    font-size: 18px;
-    color: #08324F;
-    background: #ff8e8e ;
-    text-align: center;
-    padding: 5px 8px;
-    border-radius: 3px;
-    border: 1px solid #ff8e8e;
-    
-}
+
+
+
 
 /* ===== Login Title Box ====== */
 .box h4 {
@@ -98,9 +77,10 @@ label p {
 /* ========= SUBMIT BUTTON ================ */
 
 input[type="submit"] {
+    margin-top: 15px;
     width: 100%;
     border: 3px solid black;
-    background: #08324f;
+    background: #08324F;
     border-radius: 50px;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
