@@ -1,5 +1,48 @@
 
 
+<!-- Connecttion to Database: -->
+<?php
+
+include('./header/connection.php');
+
+if (isset($_POST['login'])) {
+
+    $username = $_POST['uname'];
+    $password = $_POST['pass'];
+
+    $error = array();
+
+    if(empty($username)) {
+        $error['admin'] = 'Enter username';
+    }else if(empty($password)) {
+        $error['admin'] = 'Enter password';
+    }
+
+    if (count($error)==0) {
+
+        $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+
+
+        $result = mysqli_query($conn, $query);
+
+
+        if(mysqli_num_rows($result)==1){
+            echo "<script>alert('You are login as admin')</script>";
+
+            $_SESSION['admin'] = $username;
+
+            header("Location:index.php");
+
+        }else{
+            echo "<script>alert('Invalid Username or Email')</script>";
+        }
+
+
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +52,9 @@
  
     <style>
      <?php include "adminlogin.css" ?> 
-    </style>
+    </style> 
 
-    <script type="text/javascript"  src="validation.js"></script>
+    <!-- <script type="text/javascript"  src="validation.js"></script> -->
     
     <title>Admin Login</title>
 </head>
@@ -33,15 +76,33 @@
 
             <!-- FORM  -->
             <form class="form" id="login-form" action="" method="POST" onsubmit="return validate()">
+
+                <div class="alert alert-danger">
+                    <?php
+                    
+                    if(isset($error['admin'])) {
+
+                        $show = $error['admin'];
+
+                    }else {
+                        $show = "";
+                    }
+
+                    echo $show;
+  
+                    ?>
+                </div>
+
+
                 <label><p>Username:</p> </label>
-                <input type="text" id="username" class="username" placeholder="Admin Username"  value="" required> <br>
+                <input type="text" name="uname" id="username" class="username" placeholder="Admin Username"  value=""> <br>
                 
                 
                 <label><p>Password:</p>  </label>
-                <input type="password" id="password" class="password" placeholder="Admin Password" value="" required>
+                <input type="password" name="pass" id="password" class="password" placeholder="Admin Password" value="">
 
              
-                <br><input class="submit" id="submit" type="submit" value="Login">
+                <br><input name="login" class="submit" id="submit" type="submit" value="Login">
           
 
             </form>

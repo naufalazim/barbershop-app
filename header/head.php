@@ -22,7 +22,7 @@
     <ul class="nav-links">
         <li><a href="#">Customer</a></li>
         <li><a href="#">Barber</a></li>
-        <li><a href="adminlogin.php">Admin</a></li>
+        <li><a href="/barbershop-app//adminlogin.php">Admin</a></li>
     </ul>
 
     </nav>
