@@ -57,12 +57,13 @@ nav {
 
 
 /* PART: Logo  */
-.logo {
+.logo a{
     /* text-transform: uppercase; */
     letter-spacing: 1px;
-    font-size: 25px;
+    font-size: 45px;
     font-family: 'Merriweather', serif;
     font-weight: 900;
     text-align: center;
     color: azure;
+    text-decoration: none;
 }

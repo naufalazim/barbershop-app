@@ -16,7 +16,7 @@
     <nav>
 
     <div class="logo">
-        <h2>Barbershop</h2>
+        <h2><a href="index.php">Barbershop</a></h2>
     </div>
 
     <ul class="nav-links">
