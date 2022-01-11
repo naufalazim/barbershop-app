@@ -7,27 +7,33 @@ include('./barbershop-app/include/connection.php');
 
 if (isset($_POST['login'])) {
 
+    //Setup var by name:
     $username = $_POST['uname'];
     $password = $_POST['pass'];
 
     $error = array();
+    
 
+    //Kalau username and password empty akan show error:
     if(empty($username)) {
         $error['admin'] = 'Enter username';
     }else if(empty($password)) {
         $error['admin'] = 'Enter password';
     }
 
+
+    //Kalau tiada salah:
     if (count($error)==0) {
         
 
-        // Var from DB
+
         $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
 
 
         $result = mysqli_query($conn, $query);
 
-
+        
+        //Bila tekan button login:
         if(mysqli_num_rows($result)==1){
 
             echo "<script>alert('You are login as admin')</script>";
@@ -42,8 +48,6 @@ if (isset($_POST['login'])) {
             // // array_push($error, "wrong password or username");
             // header("location: adminlogin.php"); //redirect
         }
-
-
     }
 }
 
