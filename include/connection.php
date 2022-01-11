@@ -3,7 +3,7 @@
 $db_host = "localhost";
 $db_user = "root";
 $db_password = "";
-$db_db = "app";
+$db_db = "data";
 
 $mysqli = @new mysqli(
   $db_host,

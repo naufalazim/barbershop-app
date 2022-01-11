@@ -46,14 +46,10 @@ if(isset($_POST['login'])){
           exit();
 
       }else{
-        header("location:admin.php"); 
-        exit();
+        echo "<script>alert('Wrong password mated')</script>";
       }
   }
-
-
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -83,8 +79,16 @@ if(isset($_POST['login'])){
 
 
         <!-- ERROR LOGIN SHOWN  -->
-
-
+        <div class="alert alert-danger">
+            <?php
+            if(isset($error['admin'])) {
+                $show = $error['admin'];
+            } else {
+                $show = "";
+            }
+            echo $show;
+            ?>
+        </div>
 
         <!-- PART: FORM  -->
         <form class="form" name="form" method="POST" action="adminlogin.php" id="login-form">
