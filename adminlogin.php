@@ -3,7 +3,7 @@
 <!-- Connecttion to Database: -->
 <?php
 
-include('./barbershop-app/include/connection.php');
+include('./include/connection.php');
 
 if (isset($_POST['login'])) {
 
