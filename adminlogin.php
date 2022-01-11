@@ -3,7 +3,7 @@
 <!-- Connecttion to Database: -->
 <?php
 
-include('./barbershop-app/connection.php');
+include('./barbershop-app/include/connection.php');
 
 if (isset($_POST['login'])) {
 
@@ -29,17 +29,18 @@ if (isset($_POST['login'])) {
 
 
         if(mysqli_num_rows($result)==1){
+
             echo "<script>alert('You are login as admin')</script>";
 
             $_SESSION['admin'] = $username;
             $_SESSION['success'] = "You are now login!";
 
-            header("location: index.php"); //redirect
+            header("location: admin.php"); //redirect
 
         }else{
-            // echo "<script>alert('wrong password or username')</script>";
+            echo "<script>alert('wrong password or username')</script>";
             // // array_push($error, "wrong password or username");
-            header("location: adminlogin.php"); //redirect
+            // header("location: adminlogin.php"); //redirect
         }
 
 
