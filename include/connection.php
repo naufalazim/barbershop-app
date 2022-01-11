@@ -2,7 +2,7 @@
 
 $db_host = 'localhost';
 $db_user = 'root';
-$db_password = 'root';
+$db_password = '';
 $db_db = 'information_schema';
 
 $mysqli = @new mysqli(

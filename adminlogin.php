@@ -3,7 +3,7 @@
 <!-- Connecttion to Database: -->
 <?php
 
-include('./barbershop-app/include/connection.php');
+include('./include/connection.php');
 
 if (isset($_POST['login'])) {
 
@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
         $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
 
 
-        $result = mysqli_query($conn, $query);
+        $result = mysqli_query($mysqli, $query);
 
         
         //Bila tekan button login:
