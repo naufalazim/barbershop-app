@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<?php
+include("./include/connection.php");
+?>
+
 <h2>Login succesfull</h2>
     
 </body>
