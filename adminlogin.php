@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
         $query = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
 
 
-        $result = mysqli_query($conn, $query);
+        $result = mysqli_query($mysqli, $query);
 
         
         //Bila tekan button login:
