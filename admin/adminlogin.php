@@ -1,8 +1,8 @@
 
-
 <!-- CONNECTION DATABASE  -->
 
 <?php
+
 include('../include/connection.php');
 
 if(isset($_POST['login'])){
@@ -46,9 +46,8 @@ if(isset($_POST['login'])){
           exit();
 
       }else{
-          echo "<script>alert('wrong password or username')</script>";
-          // array_push($error, "wrong password or username");
-          // header("location: adminlogin.php"); //redirect
+        header("location:admin.php"); 
+        exit();
       }
   }
 
@@ -99,12 +98,7 @@ if(isset($_POST['login'])){
         <br><input name="login" class="submit" id="submit" type="submit" value="Login">
 
 
-        </form>
-
-
-
-
-
+    </form>
 
     </div>
 </div>
