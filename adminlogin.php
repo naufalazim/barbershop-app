@@ -40,12 +40,14 @@ if (isset($_POST['login'])) {
 
             $_SESSION['admin'] = $username;
             $_SESSION['success'] = "You are now login!";
-
-            header("location: admin.php"); //redirect
+            
+            //redirect to page bila success login:
+            header("location: admin.php"); 
+            exit();
 
         }else{
             echo "<script>alert('wrong password or username')</script>";
-            // // array_push($error, "wrong password or username");
+            // array_push($error, "wrong password or username");
             // header("location: adminlogin.php"); //redirect
         }
     }
@@ -53,6 +55,9 @@ if (isset($_POST['login'])) {
 
 ?>
 
+
+
+<!-- ==== PART: HTML BODY ====== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +69,6 @@ if (isset($_POST['login'])) {
      <?php include "adminlogin.css" ?> 
     </style> 
 
-    <!-- <script type="text/javascript"  src="validation.js"></script> -->
     
     <title>Admin Login</title>
 </head>
