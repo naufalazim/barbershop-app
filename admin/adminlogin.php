@@ -27,12 +27,13 @@ if(isset($_POST['login'])){
 
       $query = "SELECT * FROM admin WHERE username='$username' AND pass='$password'";
 
+    //   $result = mysqli_query($mysqli, $query); // PROBLEM
+        $sql = "SELECT id, username, password FROM admin";
 
-      $result = mysqli_query($mysqli, $query); // PROBLEM
-    //   $result = mysqli_query(mysqli $mysql, string $query, int $result_mode = MYSQLI_STORE_RESULT): mysqli_result|bool
+        $result = $mysqli->query($sql);
 
    
-    
+
       //Bila tekan button login:
       if(mysqli_num_rows($result)==1){  //PROBLEM
 
