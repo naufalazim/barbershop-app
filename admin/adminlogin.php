@@ -29,8 +29,10 @@ if(isset($_POST['login'])){
 
 
       $result = mysqli_query($mysqli, $query); // PROBLEM
+    //   $result = mysqli_query(mysqli $mysql, string $query, int $result_mode = MYSQLI_STORE_RESULT): mysqli_result|bool
 
-      
+   
+    
       //Bila tekan button login:
       if(mysqli_num_rows($result)==1){  //PROBLEM
 

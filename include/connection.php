@@ -1,9 +1,9 @@
 <?php
 
-$db_host = 'localhost';
-$db_user = 'root';
+$db_host = "localhost";
+$db_user = "root";
 $db_password = "";
-$db_db = 'app';
+$db_db = "app";
 
 $mysqli = @new mysqli(
   $db_host,
