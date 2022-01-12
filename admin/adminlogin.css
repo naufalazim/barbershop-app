@@ -60,11 +60,11 @@ label p {
 
 /* ERROR Handling Login  */
 .alert {
-    background: rgb(248, 126, 146);
-    color: #08324F;
+    /* background: rgb(248, 126, 146); */
+    color: rgb(245, 91, 117);
     padding: 15px 35px;
     font-family: 'Merriweather', serif;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 
