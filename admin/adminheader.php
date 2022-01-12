@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="head.css"> -->
     <style>
-     <?php include "head.css" ?> 
+     <?php include "adminheader.css" ?> 
     </style>
 
     <title>Header</title>
@@ -16,13 +16,13 @@
     <nav>
 
     <div class="logo">
-        <h2><a href="/barbershop-app//index.php">Barbershop</a></h2>
+        <!-- <h2><a href="/barbershop-app//index.php">Barbershop</a></h2> -->
+        <h2><a href="#">Barbershop</a></h2>
     </div>
 
     <ul class="nav-links">
-        <li><a href="#">Customer</a></li>
-        <li><a href="#">Barber</a></li>
-        <li><a href="/barbershop-app/admin/adminlogin.php">Admin</a></li>
+        <li><a href="#">Hi, Admin!</a></li>
+        <li><a href="logoutadmin.php">Logout</a></li>
     </ul>
 
     </nav>

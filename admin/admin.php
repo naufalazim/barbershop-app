@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,10 @@
     <title>ADMIN</title>
 </head>
 <body>
-    <h2>BERJAYA!</h2>
+    <!-- HEADER  -->
+    <?php
+    include("./adminheader.php");
+    ?>
     
 </body>
 </html>
