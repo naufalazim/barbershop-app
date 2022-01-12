@@ -23,16 +23,12 @@ if(isset($_POST['login'])){
 
     if (count($error)==0) {
       
-
-
       $query = "SELECT * FROM admin WHERE username='$username' AND pass='$password'";
 
     //   $result = mysqli_query($mysqli, $query); // PROBLEM
         $sql = "SELECT id, username, password FROM admin";
 
         $result = $mysqli->query($sql);
-
-   
 
       //Bila tekan button login:
       if(mysqli_num_rows($result)==1){  //PROBLEM
@@ -79,7 +75,7 @@ if(isset($_POST['login'])){
 
 
         <!-- ERROR LOGIN SHOWN  -->
-        <div class="alert alert-danger">
+        <div class="alert">
             <?php
             if(isset($error['admin'])) {
                 $show = $error['admin'];
