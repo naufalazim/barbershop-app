@@ -42,7 +42,7 @@ if(isset($_POST['login'])){
           exit();
 
       }else{
-        echo "<script>alert('Wrong password mated')</script>";
+        echo "<script>alert('Wrong password or username')</script>";
       }
   }
 }
