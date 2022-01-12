@@ -26,12 +26,13 @@ if(isset($_POST['login'])){
       $query = "SELECT * FROM admin WHERE username='$username' AND pass='$password'";
 
     //   $result = mysqli_query($mysqli, $query); // PROBLEM
-        $sql = "SELECT id, username, password FROM admin";
+        // $sql = "SELECT id, username, password FROM admin";
+        $sql = "SELECT * FROM admin WHERE 1";
 
         $result = $mysqli->query($sql);
 
       //Bila tekan button login:
-      if(mysqli_num_rows($result)==1){  //PROBLEM
+      if(mysqli_num_rows($result)==1){  
 
           echo "<script>alert('You are login as admin')</script>";
 
