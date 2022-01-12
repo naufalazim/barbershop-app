@@ -1,23 +1,18 @@
 <?php
 
-$db_host = "localhost";
-$db_user = "root";
-$db_password = "";
-$db_db = "data";
+$mysqli = new mysqli('127.0.0.1', 'root', '', 'data');
 
-$mysqli = @new mysqli(
-  $db_host,
-  $db_user,
-  $db_password,
-  $db_db
-);
+// $db_host = "127.0.0.1";
+// $db_user = "root";
+// $db_password = "";
+// $db_db = "data";
 
-  if ($mysqli->connect_error) {
-    echo 'Errno: '.$mysqli->connect_errno;
-    echo '<br>';
-    echo 'Error: '.$mysqli->connect_error;
-    exit();
-  }
+// $mysqli = @new mysqli(
+//   $db_host,
+//   $db_user,
+//   $db_password,
+//   $db_db
+// );
 
   echo 'Berjaya: A proper connection to MySQL was made.';
   echo '<br>';
