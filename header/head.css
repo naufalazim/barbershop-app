@@ -17,10 +17,11 @@ nav {
     position: -webkit-sticky;
     top: 0; /* required */
     /* margin-top: 20px; */
+    padding: 15px 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #08324F;
+    background-color: black;
 }
 
 
@@ -36,12 +37,15 @@ nav {
     background: whitesmoke;
     list-style: none;
     border: solid 3px black;
-    padding: 6px 15px;
+    padding: 10px 20px;
+    margin: 0px 10px;
     font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
 }
 
 .nav-links li:hover {
-    background-color: #C84B31;
+    background-color: #B88746;
+    transition: 0.5s;
 }
 
 /* Nav font */
@@ -64,6 +68,6 @@ nav {
     font-family: 'Merriweather', serif;
     font-weight: 900;
     text-align: center;
-    color: azure;
+    color: whitesmoke;
     text-decoration: none;
 }

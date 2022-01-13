@@ -16,12 +16,12 @@
     <nav>
 
     <div class="logo">
-        <h2><a href="/barbershop-app//index.php">Barbershop</a></h2>
+        <h2><a href="/barbershop-app//index.php">Tuah.</a></h2>
     </div>
 
     <ul class="nav-links">
         <li><a href="#">Customer</a></li>
-        <li><a href="#">Barber</a></li>
+        <li><a href="#">Staff</a></li>
         <li><a href="/barbershop-app/admin/adminlogin.php">Admin</a></li>
     </ul>
 

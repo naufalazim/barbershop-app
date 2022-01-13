@@ -12,7 +12,7 @@ if(isset($_SESSION['username'])) {
 
 if(isset($_POST['login'])) {
     $username = $_POST['username'];
-    $password = md5($_POST['pass']);
+    $password = $_POST['pass'];
 
         //Kalau username and password empty akan show error:
         if(empty($username)) {
@@ -55,11 +55,12 @@ if(isset($_POST['login'])) {
     ?>
 
 <!-- BODY PART  -->
+
 <div class="container">
     <div class="box">
 
     <!-- PART BOX LOGIN  -->
-        <h4>Admin Login.</h4>
+        <h4>Login.</h4>
 
 
         <!-- ERROR LOGIN SHOWN  -->
