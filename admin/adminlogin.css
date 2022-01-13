@@ -18,12 +18,15 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #08324F; 
+    /* background: #08324F;  */
+    background-image: url(../img/bg.jpg);
+    background-position: center;
+    background-size: cover;
     
 }
 
 .box {
-    background: #ECDBBA;
+    background: whitesmoke;
     width: 400px;
     padding: 40px 30px 50px 30px;
     text-align: center;
@@ -55,7 +58,7 @@ label p {
     padding: 10px 0px;
     font-family: 'Merriweather', serif;
     font-weight: 400;
-    color: #08324f;
+    color: black;
 }
 
 
@@ -69,10 +72,6 @@ label p {
 }
 
 
-
-
-
-
 /* ===== Login Title Box ====== */
 .box h4 {
     font-size: 30px;
@@ -80,7 +79,7 @@ label p {
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    color: #08324F;
+    color: black;
     
     
 }
@@ -91,7 +90,7 @@ input[type="submit"] {
     margin-top: 15px;
     width: 100%;
     border: 3px solid black;
-    background: #08324F;
+    background: black;
     border-radius: 50px;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
@@ -104,6 +103,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     /* border-color: ; */
-    background: #C84B31;
+    background: #B88746;
     transition: .5s;
+    color: black;
 }
