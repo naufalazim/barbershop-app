@@ -1,52 +1,39 @@
 
-<!-- CONNECTION DATABASE  -->
-
 <?php
-
 include('../include/connection.php');
 
-if(isset($_POST['login'])){
+session_start();
+error_reporting(0);
 
-   
-    $username = $_POST['username'];
-    $password = $_POST['pass'];
-
-    $error = array();
-    
-
-    //Kalau username and password empty akan show error:
-    if(empty($username)) {
-        $error['admin'] = 'Enter username';
-    }else if(empty($password)) {
-        $error['admin'] = 'Enter password';
-    }
-
-    if (count($error)==0) {
-      
-      $query = "SELECT * FROM admin WHERE username='$username' AND pass='$password'";
-
-    //   $result = mysqli_query($mysqli, $query); // PROBLEM
-        // $sql = "SELECT id, username, password FROM admin";
-        $sql = "SELECT * FROM admin WHERE 1";
-
-        $result = $mysqli->query($sql);
-
-      //Bila tekan button login:
-      if(mysqli_num_rows($result)==1){  
-
-          echo "<script>alert('You are login as admin')</script>";
-
-          $_SESSION['admin'] = $username;
-          
-          //redirect to page bila success login:
-          header("location: admin.php"); 
-          exit();
-
-      }else{
-        echo "<script>alert('Wrong password or username')</script>";
-      }
-  }
+if(isset($_SESSION['username'])) {
+    header("Location: admin.php");
 }
+
+
+if(isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = md5($_POST['pass']);
+
+        //Kalau username and password empty akan show error:
+        if(empty($username)) {
+            $error['admin'] = 'Enter username';
+        }else if(empty($password)) {
+            $error['admin'] = 'Enter password';
+        }
+
+    //query:
+    $sql = "SELECT * FROM admin WHERE username='$username' AND password='$password'";
+    $result = $mysqli->query($sql);
+
+    if($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header('location: admin.php');
+    } else {
+        echo "<script>Wrong password</script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
