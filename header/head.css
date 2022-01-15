@@ -48,6 +48,10 @@ nav {
     transition: 0.5s;
 }
 
+.nav-items {
+    padding: 0px 15px;
+}
+
 /* Nav font */
 .nav-links a{
     text-decoration: none;
@@ -56,6 +60,12 @@ nav {
 
 .nav-links a:hover {
     color: #ECDBBA;
+}
+
+/* icons */
+.toggle-menu
+.toggle-close {
+    display: none;
 }
 
 
@@ -70,4 +80,38 @@ nav {
     text-align: center;
     color: whitesmoke;
     text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        height: 68px;
+        justify-content: space-around;
+        padding: 0 28px;
+    }
+
+    .logo a {
+       font-size: 40px;
+    }
+
+    .nav-links li {
+        background: whitesmoke;
+        list-style: none;
+        border: solid 1px black;
+        padding: 5px 10px;
+        margin: 0px 5px;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+    }
+
+    .nav-items {
+        padding: 0px 5px;
+    }
+
+    /* icons */
+.toggle-menu
+.toggle-close {
+    display: none;
+}
+    
+
 }
