@@ -4,8 +4,8 @@ include('../include/connection.php');
 session_start();
 error_reporting(0);
 
-if(isset($_SESSION['username'])) {
-    header("Location: customer.php");
+if(isset($_SESSION['customer'])) {
+    header("location: ./customer.php");
 }
 
 if(isset($_POST['login'])) {
@@ -27,7 +27,7 @@ if(isset($_POST['login'])) {
 
     if($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
+        $_SESSION['customer'] = $row['username'];
         header('location: customer.php');
     } else {
         echo "<script>Wrong password</script>";

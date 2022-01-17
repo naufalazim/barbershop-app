@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 
@@ -13,7 +14,12 @@ session_start();
 </head>
 <body>
 
-<h2>Berjaya masuk customer dashboard</h2>
+<!-- HEADER  -->
+<?php
+include("../header/head.php");
+?>
+
+<h2>Dashboard customer</h2>
     
 </body>
 </html>
