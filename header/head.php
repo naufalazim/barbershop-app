@@ -22,7 +22,7 @@
     <!-- <ion-icon name="menu-outline" class="toggle-menu"></ion-icon> -->
 
     <ul class="nav-links">
-        <li><a href="#" class="nav-items">Customer</a></li>
+        <li><a href="../customer/customerlogin.php" class="nav-items">Customer</a></li>
         <li><a href="/barbershop-app/staff/stafflogin.php" class="nav-items">Staff</a></li>
         <li><a href="/barbershop-app/admin/adminlogin.php" class="nav-items">Admin</a></li>
     </ul>

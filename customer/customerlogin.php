@@ -1,15 +1,12 @@
-
 <?php
 include('../include/connection.php');
 
 session_start();
 error_reporting(0);
 
-
 if(isset($_SESSION['username'])) {
-    header("Location: staff.php");
+    header("Location: customer.php");
 }
-
 
 if(isset($_POST['login'])) {
     $username = $_POST['username'];
@@ -17,26 +14,26 @@ if(isset($_POST['login'])) {
 
         //Kalau username and password empty akan show error:
         if(empty($username)) {
-            $error['staff'] = 'Enter username';
+            $error['customer'] = 'Enter username';
         }else if(empty($password)) {
-            $error['staff'] = 'Enter password';
+            $error['customer'] = 'Enter password';
         }else {
-            $error['staff'] = "Wrong username or password";
+            $error['customer'] = "Wrong username or password";
         }
 
-        
     //query:
-    $sql = "SELECT * FROM employee WHERE username='$username' AND password='$password'";
+    $sql = "SELECT * FROM customer WHERE username='$username' AND password='$password'";
     $result = $mysqli->query($sql);
 
     if($result->num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['username'] = $row['username'];
-        header('location: staff.php');
+        header('location: customer.php');
     } else {
         echo "<script>Wrong password</script>";
     }
 }
+
 
 
 ?>
@@ -47,9 +44,9 @@ if(isset($_POST['login'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staff Login</title>
+    <title>Login Customer</title>
     <style>
-     <?php include "stafflogin.css" ?> 
+     <?php include "customerlogin.css" ?> 
     </style> 
 </head>
 <body>
@@ -57,7 +54,7 @@ if(isset($_POST['login'])) {
 <!-- HEADER  -->
 <?php
     include('../header/head.php');
-?>
+    ?>
 
 <!-- BODY PART  -->
 
@@ -65,14 +62,15 @@ if(isset($_POST['login'])) {
     <div class="box">
 
     <!-- PART BOX LOGIN  -->
-        <h4>Employee.</h4>
+        <h6>Customer</h6>
+        <h4>Login.</h4>
 
 
         <!-- ERROR LOGIN SHOWN  -->
         <div class="alert">
             <?php
-            if(isset($error['staff'])) {
-                $show = $error['staff'];
+            if(isset($error['customer'])) {
+                $show = $error['customer'];
             } else {
                 $show = "";
             }
@@ -81,13 +79,13 @@ if(isset($_POST['login'])) {
         </div>
 
         <!-- PART: FORM  -->
-        <form class="form" name="form" method="POST" action="stafflogin.php" id="login-form">
+        <form class="form" name="form" method="POST" action="customerlogin.php" id="login-form">
 
         <label><p>Username:</p> </label>
-        <input type="text" name="username" id="username" class="username" placeholder="Staff Username"  value=""> <br>
+        <input type="text" name="username" id="username" class="username" placeholder="Your Username"  value=""> <br>
 
         <label><p>Password:</p>  </label>
-        <input type="password" name="pass" id="password" class="password" placeholder="Staff Password" value="">
+        <input type="password" name="pass" id="password" class="password" placeholder="Your Password" value="">
 
         <br><input name="login" class="submit" id="submit" type="submit" value="Login">
 
@@ -96,7 +94,6 @@ if(isset($_POST['login'])) {
 
     </div>
 </div>
-
 
     
 </body>
