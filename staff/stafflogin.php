@@ -69,7 +69,8 @@ if(isset($_POST['login'])) {
     <div class="box">
 
     <!-- PART BOX LOGIN  -->
-        <h4>Employee.</h4>
+    <h6>Staff</h6>
+    <h4>Login.</h4>
 
 
         <!-- ERROR LOGIN SHOWN  -->

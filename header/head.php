@@ -21,7 +21,7 @@
     <?php
     if(isset($_SESSION['admin']) || isset($_SESSION['staff']) || isset($_SESSION['customer'])) {
         echo '
-        <li><a href="/barbershop-app/admin/logoutadmin.php" class="nav-items">Logout</a></li> 
+        <li><a href="../logout.php" class="nav-items">Logout</a></li> 
         
         ';
     }else {
