@@ -1,21 +1,45 @@
 
 
+<?php
+include('../include/connection.php');
+
+session_start();
+error_reporting(0);
 
 
+if(isset($_SESSION['username'])) {
+    header("Location: staff.php");
+}
 
 
+if(isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['pass'];
+
+        //Kalau username and password empty akan show error:
+        if(empty($username)) {
+            $error['staff'] = 'Enter username';
+        }else if(empty($password)) {
+            $error['staff'] = 'Enter password';
+        }else {
+            $error['staff'] = "Wrong username or password";
+        }
+
+    //query:
+    $sql = "SELECT * FROM employee WHERE username='$username' AND password='$password'";
+    $result = $mysqli->query($sql);
+
+    if($result->num_rows > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        header('location: staff.php');
+    } else {
+        echo "<script>Wrong password</script>";
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,8 +71,8 @@
         <!-- ERROR LOGIN SHOWN  -->
         <div class="alert">
             <?php
-            if(isset($error[''])) {
-                $show = $error[''];
+            if(isset($error['staff'])) {
+                $show = $error['staff'];
             } else {
                 $show = "";
             }
@@ -57,7 +81,7 @@
         </div>
 
         <!-- PART: FORM  -->
-        <form class="form" name="form" method="POST" action="adminlogin.php" id="login-form">
+        <form class="form" name="form" method="POST" action="stafflogin.php" id="login-form">
 
         <label><p>Username:</p> </label>
         <input type="text" name="username" id="username" class="username" placeholder="Staff Username"  value=""> <br>

@@ -19,6 +19,8 @@ if(isset($_POST['login'])) {
             $error['admin'] = 'Enter username';
         }else if(empty($password)) {
             $error['admin'] = 'Enter password';
+        }else {
+            $error['admin'] = "Wrong username or password";
         }
 
     //query:
