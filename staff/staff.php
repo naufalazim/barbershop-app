@@ -13,6 +13,11 @@ session_start();
 </head>
 <body>
 
+<!-- HEADER  -->
+<?php
+include("../header/head.php");
+?>
+
 <h2>Welcome to Employee!</h2>
 
 
