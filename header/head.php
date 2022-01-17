@@ -17,7 +17,6 @@
         <h2><a href="/barbershop-app//index.php">Tuah.</a></h2>
     </div>
 
-
     <ul class="nav-links">
     <?php
     if(isset($_SESSION['admin']) || isset($_SESSION['staff']) || isset($_SESSION['customer'])) {
