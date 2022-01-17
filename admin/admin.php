@@ -12,31 +12,10 @@
     <title>ADMIN</title>
 </head>
 <body>
-    <!-- HEADER  -->
-    <?php
-    include("./adminheader.php");
-    ?>
-
 
 <div>
-
-    <!-- PART: SIDE NAVBAR  -->
-   <div class="sidebar">
-        <center>
-            <img src="/barbershop-app//img/admin.jpeg" class="profile-image" alt="">
-            <h4>Admin</h4>
-        </center>
-
-        <a href="#"><span>Dashboard</span></a>
-        <a href="#"><span>Logout</span></a>
-        <!-- <a href=""><span>Dashboard</span></a>
-        <a href=""><span>Dashboard</span></a>
-        <a href=""><span>Dashboard</span></a> -->
-   </div>
-
-
+    <?php include "./adminheader.php"    ?>
 </div>
-
 
 </body>
 </html>

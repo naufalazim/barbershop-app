@@ -23,7 +23,7 @@
 
     <ul class="nav-links">
         <li><a href="#" class="nav-items">Customer</a></li>
-        <li><a href="#" class="nav-items">Staff</a></li>
+        <li><a href="/barbershop-app/staff/stafflogin.php" class="nav-items">Staff</a></li>
         <li><a href="/barbershop-app/admin/adminlogin.php" class="nav-items">Admin</a></li>
     </ul>
     <!-- <ion-icon name="close-outline" class="toggle-close"></ion-icon> -->
