@@ -19,6 +19,7 @@ session_start();
 include("../header/head.php");
 ?>
 
+<!-- BODY PART  -->
 <h2>Dashboard customer</h2>
     
 </body>
