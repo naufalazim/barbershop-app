@@ -21,28 +21,28 @@ session_start();
     <?php include "../header/head.php"    ?>
 </div>
 
+
 <div class="row">
 
     <!-- SIDEBAR Dashboard -->
 <div class="side">
     <div class="profile-image">
-    <img class="profile" src="../img/profile1.jpeg">
+        <img class="profile" src="../img/profile1.jpeg">
     </div>
-    <h5 class="name">Admin</h5>
-    <!-- <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p> -->
-    <div class="nav">
-    <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Message</a></li>
 
-    </ul>
+    <h5 class="name">Admin</h5>
+   
+    <div class="nav">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Message</a></li>
+        </ul>
     </div>
 </div>
 
 
     <!-- MAIN Dashboard  -->
-    <div class="main">
+<div class="main">
     <h2 class="name-dashboard">Dashboard</h2>
     <h5>Title description, Dec 7, 2017</h5>
     <div class="image" style="height:200px;">Image</div>
@@ -54,7 +54,7 @@ session_start();
     <div class="image" style="height:200px;">Image</div>
     <p>Some text..</p>
     <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-  </div>
+</div>
 
 
 
