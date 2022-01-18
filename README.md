@@ -1,4 +1,4 @@
-# barbershop App
+# 💈barbershop App
 
 <ul>
 <li>Create barbershop App</li>
