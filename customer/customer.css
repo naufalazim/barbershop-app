@@ -39,9 +39,12 @@ body {
   /* Main column */
 .main {   
     -ms-flex: 70%; /* IE10 */
-    flex: 70%;
-    background-color: white;
+    flex: 80%;
+    background-image: url(../img/bg4.jpg);
+    background-position: center;
+    background-size: cover;
     padding: 20px;
+    min-height: 100vh;
   }
 
 
@@ -98,6 +101,72 @@ body {
   li {
     list-style-type: none;
   }
+
+
+/* FORM PART  */
+
+form .form-box {
+/* Center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  /* Form outline */
+  border: 1px solid #CCC;
+  background-color: rgb(233, 233, 233);
+  width: 400px;
+  padding: 40px 30px 50px 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.name-dashboard {
+    color: azure;
+}
+
+.box-title {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 45px;
+}
+
+.form-box input::placeholder {
+    color: grey;
+    font-size: 15px;  
+    padding-left: 15px;
+}
+
+  input,
+textarea {
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 0 15px;
+    font-size: 17px;
+}
+
+input[type="submit"] {
+    margin-top: 15px;
+    width: 100%;
+    border: 3px solid black;
+    background: black;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    /* border-color: ; */
+    background: #B88746;
+    transition: .5s;
+    color: black;
+}
 
 
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */

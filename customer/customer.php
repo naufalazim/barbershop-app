@@ -1,5 +1,30 @@
+
 <?php
+include "../include/connection.php";
 session_start();
+error_reporting(0);
+
+if(isset($_POST['submit'])) {
+    $name = $_POST['nama'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $time = $_POST['time'];
+    $date = $_POST['date'];
+   
+
+    $sql = "INSERT INTO booking (name, email, phone, time, date) VALUES ('$name', '$email', '$phone', '$time', '$date')";
+    $result = $mysqli->query($sql);
+
+}
+
+if(!$result) {
+    echo "<script>Not successfull!</script>";
+}else {
+    echo "<script> successfull!</script>";
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +58,7 @@ session_start();
    
     <div class="nav">
         <ul>
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="#main">Dashboard</a></li>
             <li><a href="#">Message</a></li>
         </ul>
     </div>
@@ -41,11 +66,34 @@ session_start();
 
 
     <!-- MAIN Dashboard  -->
-<div class="main">
+<div class="main" id="main">
     <h2 class="name-dashboard">Dashboard</h2>
 
-</div>
+    <form action="" method="POST">
+    <div class="form-box">
 
+    <h3 class="box-title">Reservation</h3>
+    <input type="text" name="nama" class="form-input" placeholder="Your Name" value="" required><br>
+
+    <input type="email" name="email" class="form-input"  placeholder="Your Email" value="" required><br>
+
+    <input type="tel" name="phone" class="form-input"  placeholder="Your Number Phone" value="" required><br>
+
+    <input type="date" name="date" class="form-input"  value="" required><br>
+
+    <input type="time" name="time" class="form-input"  value="" required><br>
+
+    <br><input name="submit" class="submit" id="submit" type="submit" value="Submit">
+    
+    </div>
+    </form>
+
+
+    <footer>
+        <p>© 2022 Naufal Azim.</p>
+    </footer>
+    
+</div>
 
     
 </body>
