@@ -62,7 +62,21 @@ a:focus {
 /* ---------------------------------------------------
 CONTENT STYLE
 ----------------------------------------------------- */
-
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/Bg5.jpg");
+  }
+  
+  #content.active {
+    width: 100%;
+  }
+  
 
 
 /* ---------------------------------------------------
