@@ -14,9 +14,10 @@ if(isset($_POST['submit'])) {
     $phone = $_POST['phone'];
     $time = $_POST['time'];
     $date = $_POST['date'];
+    $status = $_POST['status'];
    
 
-    $sql = "INSERT INTO booking (name, email, phone, time, date) VALUES ('$name', '$email', '$phone', '$time', '$date')";
+    $sql = "INSERT INTO booking (name, email, phone, time, date, status) VALUES ('$name', '$email', '$phone', '$time', '$date','$status')";
     $result = $mysqli->query($sql);
 
     if($result){
@@ -131,7 +132,7 @@ if(isset($_GET['delete'])) {
 
     <div class="container" id="an">
     <table class="table table-dark">
-      <h2 class="text-white pt-3">Message by Admin</h2>
+      <h2 class="text-white text-center pt-3 bg-dark" id="t">Message by Admin</h2>
         <thead>
             <tr>
                 <th>Name</th>
@@ -143,7 +144,7 @@ if(isset($_GET['delete'])) {
         <?php
         while ($row = $result -> fetch_assoc()):    ?>  
         <tr>
-        <td><?php echo $row['name'];  ?></td>
+            <td><?php echo $row['name'];  ?></td>
             <td><?php echo $row['message']; ?></td>
             <td><?php echo $row['cr_date']; ?></td>
             <td>
@@ -155,11 +156,30 @@ if(isset($_GET['delete'])) {
       
     </table>
     </div>
+          <!-- APPROVE CUSTOMER DASHBOARD -->
+          <div>
+          <?php
+          include("./approve.php");
+          ?>
+          </div>
+      
+
+
+
+
+
 
     <footer>
         <p>© 2022 Naufal Azim.</p>
     </footer>
     
+
+
+
+
+
+
+
 </div>
 
     </div>
