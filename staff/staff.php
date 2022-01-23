@@ -27,6 +27,13 @@ if(isset($_GET['delete'])) {
   header("location: staff.php");
 }
 
+if(isset($_GET['approve'])) {
+  $id = $_GET['approve'];
+
+  $mysqli->query("UPDATE booking set status='yes' WHERE id=$id");
+
+}
+
 
 
 ?>
@@ -116,7 +123,7 @@ if(isset($_GET['delete'])) {
             <td><?php echo $row['date']; ?></td>
             <td>
                 
-                <a href="index.php?edit=<?php  echo $row['id'];  ?>"
+                <a href="staff.php?approve=<?php  echo $row['id'];  ?>"
                     class="btn btn-success">Approve</a>
                 <a href="staff.php?delete=<?php echo $row['id']; ?>"
                     class="btn btn-danger">Delete</a>

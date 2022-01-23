@@ -98,6 +98,12 @@ MAIN CONTENT
     margin-bottom: 50px;
   }
 
+  #an {
+   position: relative;
+   padding: 40px;
+  }
+
+
 /* FORM PART  */
 
 form .form-box {
