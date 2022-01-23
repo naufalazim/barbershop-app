@@ -12,6 +12,8 @@ session_start();
 <style>
     <?php include "admin.css" ?>
 </style>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
 <body>  
 
 <div class="wrapper">
@@ -64,11 +66,22 @@ session_start();
 
         <!-- Body  -->
 
-          <!-- MAIN Dashboard  -->
+        <!-- MAIN Dashboard: MESSAGE ANNOUCEMENT  -->
+        <!-- PART: FORM   -->
+      <!-- PART: FORM  -->
+ 
 
 
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- jQuery CDN -->
