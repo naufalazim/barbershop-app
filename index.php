@@ -11,10 +11,8 @@ if(isset($_POST['newsave'])) {
     $sql="INSERT INTO customer (username, password) VALUES ('$name', '$pass')";
     $result = $mysqli->query($sql);
 
-    if(!$result){
-        echo "<script>Tidak berjaya</script>";
-    }else {
-        echo "<script> berjaya</script>";
+    if($result){
+        echo "<script>alert('Berjaya daftar');</script>";
     }
 }
 

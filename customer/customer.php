@@ -19,13 +19,29 @@ if(isset($_POST['submit'])) {
     $sql = "INSERT INTO booking (name, email, phone, time, date) VALUES ('$name', '$email', '$phone', '$time', '$date')";
     $result = $mysqli->query($sql);
 
+    if($result){
+      echo "<script>alert('Berjaya reservation!');</script>";
+  }
+
 }
 
-if(!$result) {
-    echo "<script>Not successfull!</script>";
-}else {
-    echo "<script> successfull!</script>";
+
+//PART MESSAGE ANNOUCEMENT:
+$sql = "SELECT * FROM inf";
+$result = $mysqli->query($sql);
+
+//Part click button action:
+if(isset($_GET['delete'])) {
+  $id = $_GET['delete'];
+  $mysqli->query("DELETE FROM inf WHERE id=$id");
+
+  //message alert:
+  $_SESSION['message'] = "Record has been deleted";
+  $_SESSION['msg_type'] = "danger";
+
+  header("location: customer.php");
 }
+
 ?>
 
 <!-- HTML FILE  -->
@@ -54,7 +70,7 @@ if(!$result) {
           <a href="#main">Dashboard</a>
         </li>
         <li>
-          <a href="">Annoucement</a>
+          <a href="#an">Annoucement</a>
         </li>
         <li>
           <a href="../logout.php">Logout</a>
@@ -113,6 +129,32 @@ if(!$result) {
     </div>
     </form>
 
+    <div class="container" id="an">
+    <table class="table table-dark">
+      <h2 class="text-white pt-3">Message by Admin</h2>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>message</th>
+                <th>Date</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <?php
+        while ($row = $result -> fetch_assoc()):    ?>  
+        <tr>
+        <td><?php echo $row['name'];  ?></td>
+            <td><?php echo $row['message']; ?></td>
+            <td><?php echo $row['cr_date']; ?></td>
+            <td>
+                <a href="customer.php?delete=<?php echo $row['id']; ?>"
+                    class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        <?php  endwhile;  ?>    
+      
+    </table>
+    </div>
 
     <footer>
         <p>© 2022 Naufal Azim.</p>

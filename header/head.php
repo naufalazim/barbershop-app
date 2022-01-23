@@ -18,22 +18,11 @@
     </div>
 
     <ul class="nav-links">
-    <?php
-    if(isset($_SESSION['admin']) || isset($_SESSION['staff']) || isset($_SESSION['customer'])) {
-        echo '
-        <li><a href="../logout.php" class="nav-items">Logout</a></li> 
-        
-        ';
-    }else {
-        echo '
         
         <li><a href="/barbershop-app/customer/customerlogin.php" class="nav-items">Customer</a></li>
         <li><a href="/barbershop-app/staff/stafflogin.php" class="nav-items">Staff</a></li>
         <li><a href="/barbershop-app/admin/adminlogin.php" class="nav-items">Admin</a></li> 
-        
-        ';
-    }
-    ?>
+    
     </ul>
     
     </nav>

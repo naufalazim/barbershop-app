@@ -1,5 +1,20 @@
 <?php
 session_start();
+include("../include/connection.php");
+
+if(isset($_POST['send'])) {
+
+  $name = $_POST['name'];
+  $msg = $_POST['msg'];
+  $date = date('y-m-d h:i:s');
+
+  $sql = "INSERT INTO inf (name, message, cr_date) VALUES ('$name', '$msg', '$date')";
+  $result = $mysqli->query($sql);
+
+  if($result) {
+      echo "<script>alert('Success annoucement!');</script>";
+  }
+}
 
 ?>
 
@@ -67,21 +82,29 @@ session_start();
         <!-- Body  -->
 
         <!-- MAIN Dashboard: MESSAGE ANNOUCEMENT  -->
-        <!-- PART: FORM   -->
-      <!-- PART: FORM  -->
+        <div class="container" id="center">
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <form method="POST" action="">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Enter Message</label>
+                                <input type="text" class="form-control" name="msg"  id="exampleInputPassword1" placeholder="Enter Message">
+                            </div>
+                            <button type="submit" name="send" class="btn btn-primary">Submit</button>
+                            </form>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>
+        </div>
+
+      
+
  
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- jQuery CDN -->
@@ -92,6 +115,8 @@ session_start();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
   <script type="text/javascript">
+
+
     $(document).ready(function() {
 
 

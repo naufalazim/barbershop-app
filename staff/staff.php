@@ -95,6 +95,7 @@ if(isset($_GET['delete'])) {
     <!-- //belah TABLE -->
 
     <table class="table table-dark">
+      <h2 id="title">Reservation by Customer</h2>
         <thead>
             <tr>
                 <th>Name</th>
@@ -114,7 +115,7 @@ if(isset($_GET['delete'])) {
             <td><?php echo $row['time']; ?></td>
             <td><?php echo $row['date']; ?></td>
             <td>
-                <!-- minit 21:00  -->
+                
                 <a href="index.php?edit=<?php  echo $row['id'];  ?>"
                     class="btn btn-success">Approve</a>
                 <a href="staff.php?delete=<?php echo $row['id']; ?>"
@@ -124,26 +125,7 @@ if(isset($_GET['delete'])) {
         <?php  endwhile;  ?>    
       
     </table>
-  
-    </div>
-   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-  </div>
 
 
   <!-- jQuery CDN -->

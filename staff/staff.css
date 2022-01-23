@@ -76,6 +76,15 @@ CONTENT STYLE
   #content.active {
     width: 100%;
   }
+
+  #title {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    background: #FFEEAD;
+    padding: 10px;
+    border-radius: 50px;
+    color: #D9534F;
+  }
   
 
 
