@@ -82,17 +82,17 @@ if(isset($_POST['send'])) {
         <!-- Body  -->
 
         <!-- MAIN Dashboard: MESSAGE ANNOUCEMENT  -->
-        <div class="container" id="center">
+        <div class="container bg-dark" id="center">
                 <div class="row">
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
                         <form method="POST" action="">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Name</label>
+                                <label for="exampleInputEmail1" class="text-white">Name</label>
                                 <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Enter Message</label>
+                                <label for="exampleInputPassword1" class="text-white">Enter Message</label>
                                 <input type="text" class="form-control" name="msg"  id="exampleInputPassword1" placeholder="Enter Message">
                             </div>
                             <button type="submit" name="send" class="btn btn-primary">Submit</button>

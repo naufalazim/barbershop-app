@@ -162,12 +162,7 @@ if(isset($_GET['delete'])) {
           include("./approve.php");
           ?>
           </div>
-      
-
-
-
-
-
+    
 
     <footer>
         <p>© 2022 Naufal Azim.</p>
