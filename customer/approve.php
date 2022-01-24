@@ -4,7 +4,24 @@ include "../include/connection.php";
 
 $sql = "SELECT * FROM booking";
 $result = $mysqli->query($sql);
+$queryResult = mysqli_num_rows($result);
 
+if(isset($_POST['search'])) {
+    $search = mysqli_real_escape_string($mysqli, $_POST['query']);
+    $sql = "SELECT * FROM booking WHERE name LIKE '%$search%' OR email LIKE '%$search%'";
+    $result = $mysqli->query($sql);
+    $queryResult = mysqli_num_rows($result);
+
+    if($queryResult > 0) {
+        while($row = mysqli_fetch_assoc($result)){
+                echo "
+                <h4>".$row['name']."</h4>";
+                echo "<script>alert('Approved!');<script>";
+        }
+    }else {
+        echo "No result";
+    }
+}
 
 ?>
 
@@ -21,6 +38,8 @@ $result = $mysqli->query($sql);
 <div class="container" id="an">
     <table class="table table-hover">
       <h2 class="text-white text-center bg-dark">Approval Customer</h2>
+
+
         <thead class="thead-dark">
             <tr>
                 <th>Name</th>

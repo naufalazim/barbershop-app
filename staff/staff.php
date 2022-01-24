@@ -27,6 +27,8 @@ if(isset($_GET['delete'])) {
   header("location: staff.php");
 }
 
+
+
 if(isset($_GET['approve'])) {
   $id = $_GET['approve'];
 
@@ -101,7 +103,7 @@ if(isset($_GET['approve'])) {
 <div class="row justify-content-center">
     <!-- //belah TABLE -->
 
-    <table class="table table-dark">
+<table class="table table-dark">
       <h2 id="title">Reservation by Customer</h2>
         <thead>
             <tr>
@@ -110,7 +112,7 @@ if(isset($_GET['approve'])) {
                 <th>phone</th>
                 <th>time</th>
                 <th>date</th>
-                <th colspan="2">Action</th>
+                <th colspan="3">Action</th>
             </tr>
         </thead>
         <?php
@@ -127,11 +129,14 @@ if(isset($_GET['approve'])) {
                     class="btn btn-success">Approve</a>
                 <a href="staff.php?delete=<?php echo $row['id']; ?>"
                     class="btn btn-danger">Delete</a>
+                <a href="modify.php?edit=<?php echo $row['id']; ?>"
+                    class="btn btn-info">Edit</a>
             </td>
         </tr>
         <?php  endwhile;  ?>    
       
     </table>
+
 
 
 
