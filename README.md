@@ -16,6 +16,8 @@ Problem statement: Created a booking management for new barbershop at block Tuah
   <li>Integrated with Mysql as Database using PHP.</li>
 </ul>
 
+<br></br>
+
 ## Technology/Language used to develop?
 <ul>
   <li>HTML</li>  
