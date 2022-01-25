@@ -1,7 +1,5 @@
-# 💈barbershop App
+# 💈Barbershop Management UPNM 
 
-<ul>
-  <li>Frontend : <b>HTML, CSS, Javascript</br></li>
-<li><b>Backend :</b> PHP</li>
-  <li><b>Database :</b> Mysql</li>
-</ul>
+Problem statement: Created a booking management for new barbershop at block Tuah in UPNM
+
+## What's the element in the system?
