@@ -28,4 +28,8 @@ Problem statement: Created a booking management for new barbershop at block Tuah
   <li>Mysql</li>  
 </ul>
 
+<footer>
+  Created by Naufal Azim. 2022
+</footer>
+
 
