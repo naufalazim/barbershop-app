@@ -12,6 +12,7 @@ Problem statement: Created a booking management for new barbershop at block Tuah
   <li>Register</li>
   <li>Login</li>
   <li>Booking form (name, id, phone, email, time & date)</li>
+  <li>CRUD</li>
   <li>Display data in web app. </li>
   <li>Integrated with Mysql as Database using PHP.</li>
 </ul>
