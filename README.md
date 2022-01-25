@@ -5,7 +5,9 @@ Problem statement: Created a booking management for new barbershop at block Tuah
   <li>Assignment Web Programming</li>  
 </ul>
 <br></br>
+
 ## What's the component in the system?
+
 <ul>
   <li>Register</li>
   <li>Login</li>
