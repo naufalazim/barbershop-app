@@ -1,6 +1,6 @@
 # 💈Barbershop Management UPNM 
 
-Problem statement: Created a booking management for new barbershop at block Tuah in UPNM
+Problem statement: Created a booking management for new barbershop at block Tuah at UPNM
 <ul>
   <li>Assignment Web Programming</li>  
 </ul>
