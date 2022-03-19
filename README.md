@@ -1,4 +1,4 @@
-# 💈Barbershop Management UPNM 
+# 💈Tuah Barber
 
 Problem statement: Created a booking management for new barbershop at block Tuah at UPNM
 <ul>
@@ -6,7 +6,7 @@ Problem statement: Created a booking management for new barbershop at block Tuah
 </ul>
 <br></br>
 
-## What's the component in the system?
+## `What's the component in the system?`
 
 <ul>
   <li>Register</li>
@@ -19,7 +19,7 @@ Problem statement: Created a booking management for new barbershop at block Tuah
 
 <br></br>
 
-## Technology/Language used to develop?
+## `Technology/Language used to develop?`
 <ul>
   <li>HTML</li>  
   <li>CSS/Bootsrap 4</li>  
