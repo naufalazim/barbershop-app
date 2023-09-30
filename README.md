@@ -1,10 +1,7 @@
 # 💈Tuah Barber
 
+### This is my assignment project for Web Programming.
 Problem statement: Created a booking management for new barbershop at block Tuah at UPNM
-<ul>
-  <li>Assignment Web Programming</li>  
-</ul>
-<br></br>
 
 ## `What's the component in the system?`
 
@@ -27,11 +24,5 @@ Problem statement: Created a booking management for new barbershop at block Tuah
   <li>PHP</li>  
   <li>Mysql</li>  
 </ul>
-
-<br></br>
-
-<footer>
-  Created by Naufal Azim. 2022
-</footer>
 
 
